@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Sombra e o Cordo</title>
+    <title>A Sombra e o Acordo</title>
 </head>
 <body>
     <main>
         <div class="passo" id="passo-0">
-            <p>Um dia desses, dentro de um livro da biblioteca da escola, eu descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
+            <p>Lysandra está prestes a herdar formalmente a Sterling Global, vivendo uma vida de luxo e controle, reprimindo seus poderes e emoções. Kaito é apresentado em sua rotina brutal e eficiente do Yakuza.!</p>
             <button class="btn-proximo" data-proximo="1">Rio de Janeiro</button>
             <button class="btn-proximo" data-proximo="2">Pernambuco</button>
         </div>
         <div class="passo" id="passo-1">
-            <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
-            <button class="btn-proximo" data-proximo="3">Procurar a pista no topo do pico</button>
-            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
+            <p>Ocorre um evento catastrófico (ex: um assassinato de um aliado de alto escalão da Sterling) que ameaça ambas as famílias. O pai de Lysandra faz um acordo de proteção/paz forçada com o Clã Kage.</p>
+            <button class="btn-proximo" data-proximo="3">Lysandra e Kaito são forçados a trabalhar juntos. Eles se odeiam e desconfiam. A rivalidade é intensa. Lysandra tenta fugir ou sabotar o acordo./button>
+            <button class="btn-proximo" data-proximo="4">Um amigo em comum (talvez um antigo membro leal da Sterling ou um "fixer" neutro) os força a respeitar a trégua e revela a Lysandra um pouco sobre a história sombria de sua família e os laços antigos com o Clã.</button>
         </div>
     </main>
 
