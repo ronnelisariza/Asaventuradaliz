@@ -64,7 +64,93 @@
 
         <div class="passo" data-id="9" id="passo-9">
             <p>O rio à esquerda leva você a uma cachoeira escondida com inscrições antigas que revelam a entrada da cidade perdida.</p>
-            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+            <button class="btn-/* Garante que padding e border sejam incluídos na largura e altura total */
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais profunda */
+    max-width: 650px; /* Um pouco mais largo */
+    width: 100%;
+}
+
+.passo {
+    display: none; 
+    text-align: center;
+    transition: opacity 0.5s ease; /* Adiciona transição para a mudança de passo */
+    opacity: 0;
+}
+
+.passo.ativo {
+    display: block; 
+    opacity: 1;
+}
+
+.passo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+}
+
+.passo p {
+    font-size: 1.15em; /* Fonte um pouco maior */
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.btn-proximo {
+    background-color: #007bff; /* Azul primário para ação */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s;
+    width: 95%;
+    max-width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-proximo:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+/* Estilo para o botão de Reiniciar */
+.btn-reiniciar {
+    background-color: #6c757d; /* Cinza para Reiniciar */
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+.btn-reiniciar:hover {
+    background-color: #5a6268;
+}proximo" data-proximo="11">Explorar a cidade perdida</button>
         </div>
 
         <div class="passo" data-id="10" id="passo-10">
@@ -86,3 +172,154 @@
     <script src="script.js"></script>
 </body>
 </html
+/* Garante que padding e border sejam incluídos na largura e altura total */
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais profunda */
+    max-width: 650px; /* Um pouco mais largo */
+    width: 100%;
+}
+
+.passo {
+    display: none; 
+    text-align: center;
+    transition: opacity 0.5s ease; /* Adiciona transição para a mudança de passo */
+    opacity: 0;
+}
+
+.passo.ativo {
+    display: block; 
+    opacity: 1;
+}
+
+.passo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+}
+
+.passo p {
+    font-size: 1.15em; /* Fonte um pouco maior */
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.btn-proximo {
+    background-color: #007bff; /* Azul primário para ação */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s;
+    width: 95%;
+    max-width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-proximo:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+}
+
+/* Estilo para o botão de Reiniciar */
+.btn-reiniciar {
+    background-color: #6c757d; /* Cinza para Reiniciar */
+    margin-top: 40px;
+    font-size: 1.1em;
+}
+
+.btn-reiniciar:hover {
+    background-color: #5a6268;
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const mainContainer = document.querySelector('main');
+    const passos = document.querySelectorAll('.passo');
+    const transitionDuration = 500; // Deve corresponder à transição no CSS (0.5s)
+
+    /**
+     * Oculta o passo ativo e mostra o novo passo com uma transição suave.
+     * @param {string} nextStepId - O ID numérico (como string) do próximo passo (ex: '0').
+     */
+    function goToStep(nextStepId) {
+        const currentStep = document.querySelector('.passo.ativo');
+        const nextStep = document.getElementById(`passo-${nextStepId}`);
+
+        if (!nextStep) {
+            console.error(`Erro: Passo com ID "passo-${nextStepId}" não encontrado.`);
+            return;
+        }
+
+        // 1. Inicia a transição de saída (opacidade 0)
+        if (currentStep) {
+            currentStep.style.opacity = '0';
+        }
+
+        // Espera a duração da transição antes de remover a classe e mostrar o próximo
+        setTimeout(() => {
+            // 2. Remove o passo ativo atual
+            if (currentStep) {
+                currentStep.classList.remove('ativo');
+                currentStep.style.opacity = ''; // Limpa o estilo de opacidade
+            }
+
+            // 3. Adiciona a classe 'ativo' ao novo passo (display: block)
+            nextStep.classList.add('ativo');
+
+            // 4. Inicia a transição de entrada (opacidade 1) no novo passo
+            // Nota: Isso é feito após o display: block ser aplicado para que a transição funcione
+            setTimeout(() => {
+                nextStep.style.opacity = '1';
+                mainContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50); // Pequeno atraso para garantir que o DOM reconheça a mudança de display
+            
+        }, transitionDuration);
+    }
+
+    // Delegação de Eventos para todos os botões de navegação
+    mainContainer.addEventListener('click', (event) => {
+        const target = event.target;
+        
+        // Verifica se o elemento clicado é um botão de navegação
+        if (target.classList.contains('btn-proximo')) {
+            const nextStepId = target.getAttribute('data-proximo');
+            
+            if (nextStepId) {
+                goToStep(nextStepId);
+            }
+        }
+    });
+
+    // Garante que o passo inicial (passo-0) tenha opacidade 1 ao carregar a página
+    const initialStep = document.getElementById('passo-0');
+    if (initialStep && initialStep.classList.contains('ativo')) {
+        initialStep.style.opacity = '1';
+    }
+});
